@@ -65,13 +65,3 @@ class Maybe < IdentityMonad
   end
 end
 
-monad = Monad.new(2)
-monad <= lambda{|i| + 2}
-
-identity_m = IdentityMonad.new(30)
-foo = identity_m >> lambda {|i| i/2} >> lambda{|i| i*6}
-print foo.value
-
-maybe_m = Maybe.new 1
-
-print maybe_m <= lambda {|i| i +4}
