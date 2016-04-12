@@ -4,7 +4,7 @@ require_relative '../src/monad'
 describe 'test monads' do
   it 'should raise error' do
     monad = Monad.new(2)
-    expect {monad <= lambda{|i| + 2}}.to raise_error NotImplementedError
+    expect {monad >>= lambda{|i| + 2}}.to raise_error NotImplementedError
   end
 
   it 'identity monad simple test' do
@@ -15,7 +15,7 @@ describe 'test monads' do
 
   it 'test maybe simple test' do
     maybe_m = Maybe.new 1
-    expect(maybe_m <= lambda {|i| i +4}).to eq(5)
+    expect(maybe_m >>= lambda {|i| i +4}).to eq(5)
   end
 
 end

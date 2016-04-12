@@ -22,8 +22,10 @@ end
 class Monad
   extend Abstract
 
-  abstract_methods :<=
+  abstract_methods :bind
   attr_accessor :_value
+
+  alias_method '>>='.to_sym, :bind
 
   def initialize(value)
     self._value = value
@@ -41,7 +43,7 @@ class Monad
   end
 
   def >>(func)
-    self <= func
+    self.bind func
   end
 
   def +(func)
@@ -51,13 +53,13 @@ class Monad
 end
 
 class IdentityMonad < Monad
-  def <=(func)
+  def bind(func)
     self.class.unit(func.call self.value)
   end
 end
 
 class Maybe < IdentityMonad
-  def <=(func)
+  def bind(func)
     if self.value
       return func.call self.value
     end
@@ -65,3 +67,13 @@ class Maybe < IdentityMonad
   end
 end
 
+class Maybe_Nothing < Maybe
+  def bind(functor)
+    Nothing
+  end
+end
+
+Nothing = Maybe_Nothing
+
+class Just < Maybe
+end
