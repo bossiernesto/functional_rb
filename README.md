@@ -44,7 +44,7 @@ Just(177241)
 ~~~
 
 ~~~ruby
-proc {|x,y| x*y} % Just(5) * Just(3) 
+proc {|x,y| x*y} % Just(5) & Just(3) 
 Just(15)
 ~~~
 

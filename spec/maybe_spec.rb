@@ -53,7 +53,7 @@ describe 'test monads' do
 
     expect(just.apply(pure(32))).to eq(Just(33))
 
-    expect(Just(proc {|x| x * 2}) * pure(32)).to eq(Just(64))
+    expect(Just(proc {|x| x * 2}) & pure(32)).to eq(Just(64))
   end
 
   it 'applicative with multiple parameters' do
@@ -63,7 +63,7 @@ describe 'test monads' do
   end
 
   it 'applicative/functor test' do
-    expect(proc {|x,y| x*y} % Just(5) * Just(3)).to eq(Just(15))
+    expect(proc {|x,y| x*y} % Just(5) & Just(3)).to eq(Just(15))
   end
 
   it 'understands lifting' do
