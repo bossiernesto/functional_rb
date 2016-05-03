@@ -6,12 +6,12 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     json (1.8.3)
-    rake (11.1.2)
+    rake (10.5.0)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.4)
+    rspec-core (3.4.3)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -37,4 +37,4 @@ DEPENDENCIES
   rspec-mocks
 
 BUNDLED WITH
-   1.10.6
+   1.12.1
