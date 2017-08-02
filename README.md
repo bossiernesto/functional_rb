@@ -1,11 +1,11 @@
-#Functional Ruby
+# Functional Ruby
 
 [![Build Status](https://travis-ci.org/bossiernesto/functional_rb.svg?branch=master)](https://travis-ci.org/bossiernesto/functional_rb)
 [![Test Coverage](https://codeclimate.com/github/bossiernesto/functional_rb/badges/coverage.svg)](https://codeclimate.com/github/bossiernesto/functional_rb/coverage)
 
 Another repo for showing some functional properties for the Ruby language
 
-##Features 
+## Features 
 
 Taken from [Functors, Applicatives, And Monads In Pictures](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html) from Haskell
 
