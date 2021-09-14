@@ -1,7 +1,6 @@
 # Functional Ruby
 
-[![Build Status](https://travis-ci.org/bossiernesto/functional_rb.svg?branch=master)](https://travis-ci.org/bossiernesto/functional_rb)
-[![Test Coverage](https://codeclimate.com/github/bossiernesto/functional_rb/badges/coverage.svg)](https://codeclimate.com/github/bossiernesto/functional_rb/coverage)
+[![Ruby](https://github.com/bossiernesto/functional_rb/actions/workflows/ruby.yml/badge.svg?branch=main)](https://github.com/bossiernesto/functional_rb/actions/workflows/ruby.yml)
 
 Another repo for showing some functional properties for the Ruby language
 
