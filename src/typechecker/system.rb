@@ -10,18 +10,16 @@ class TypeDispatcher
     is_class_method = Proc.new { |klass, sym| klass.singleton_methods(false).include? sym }
 
     self.system = system
-    self.validators = {is_attribute => :accesor_typesig,
-                       is_method => :method_typesig,
-                       is_class_method => :class_method_typesig
+    self.validators = {
+      is_attribute => :accesor_typesig,
+      is_method => :method_typesig,
+      is_class_method => :class_method_typesig
     }
   end
 
   def dispatch(klass, sym, type_args)
     validators.each do |validator, dispatch_sym|
-      if validator.call(klass, sym)
-        return system.send dispatch_sym, sym, type_args
-      end
-
+      return system.send dispatch_sym, sym, type_args if validator.call(klass, sym)
     end
   end
 
@@ -95,5 +93,4 @@ module TypeSystem
       result
     end
   end
-
 end
