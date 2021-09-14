@@ -22,7 +22,6 @@ class TypeDispatcher
       return system.send dispatch_sym, sym, type_args if validator.call(klass, sym)
     end
   end
-
 end
 
 module TypeSystem

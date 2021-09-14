@@ -24,12 +24,7 @@ class TypeChecker
       raise ArityTypeError
     end
   end
-
 end
 
-class TypeCheckError < TypeError
-end
-
-class ArityTypeError < TypeCheckError
-end
-
+class TypeCheckError < TypeError; end
+class ArityTypeError < TypeCheckError; end

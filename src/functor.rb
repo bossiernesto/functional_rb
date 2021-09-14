@@ -38,5 +38,3 @@ module Functional
   end
 
 end
-
-
